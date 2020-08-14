@@ -1,0 +1,22 @@
+---
+layout: default
+permalink: "/"
+title: ""
+description: ""
+---
+
+<div class="jumbotron jumbotron-fluid">
+	<div class="container-fluid py-lg-5">
+		<div class="row py-xl-5">
+			<div class="col-lg-6 text-center text-lg-left">
+				<h1 class="h2 d-block d-xl-none">Hi</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% for post in site.posts %}
+	<p>
+	  <a href="{{ post.url }}">{{ post.title }}</a>
+	</p>
+{% endfor %}

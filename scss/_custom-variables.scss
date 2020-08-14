@@ -1,0 +1,22 @@
+// Overwrite Bootstrap's variables here
+// You can find them in node_modules/bootstrap/scss/_variables.scss
+// Copy the variables you need into this file, don't modify files under node_modules/
+
+$enable-responsive-font-sizes: true;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 420px,
+  md: 600px,
+  lg: 992px,
+  xl: 1400px
+);
+
+$container-max-widths: (
+  sm: 400px,
+  md: 580px,
+  lg: 980px,
+  xl: 1380px
+);
+
+$font-family-serif: Georgia, serif;

@@ -1,0 +1,36 @@
+{
+  "name": "Jekyll",
+  "version": "0.99",
+  "description": "My template for gulp powered Jekyll",
+  "repository": "https://github.com/andycroll/gulpjekyll",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bootstrap",
+    "gulp",
+    "jekyll"
+  ],
+  "author": "Andy Croll",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-scss-lint": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.16.0"
+  }
+}

@@ -1,0 +1,37 @@
+title: Site
+email: andy@goodscary.com
+description: ""
+url: "https://github.com/andycroll/gulpjekyll"
+twitter_username: andycroll
+color: "#FFFFFF"
+
+plugins:
+ - jekyll-seo-tag
+
+include:
+  - _redirects
+
+exclude:
+  - gulpfile.js
+  - javascripts/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - README.md
+  - scss/
+  - yarn.lock
+
+podcast:
+  title: [title]
+  description: [description]
+  url: /podcast.xml # podcast xml url
+  author: [podcast author]
+  email: [podcast email]
+  logo: [podcast logo url] # logo in 1400 – 3000 pixel
+  language: [language] # http://www.loc.gov/standards/iso639-2/php/code_list.php
+  category: [category] # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+  subcategory: [subcategory]
+  type: [podcast type] # episodic | serial
+  explicit: [explicit state] # true | false
+  complete: [complete state] # 'yes' | 'no'
+  block: [block state] # 'yes' | 'no'

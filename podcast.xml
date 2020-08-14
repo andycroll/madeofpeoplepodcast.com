@@ -1,0 +1,48 @@
+---
+layout: null
+---
+
+<?xml version='1.0' encoding='utf-8'?>
+<rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'>
+  <channel>
+    <title>{{ site.podcast.title }}</title>
+    <description>{{ site.podcast.description }}</description>
+    <link>{{ '/' | absolute_url }}</link>
+    <itunes:author>{{ site.podcast.author }}</itunes:author>
+    <itunes:email>{{ site.podcast.email }}</itunes:email>
+    <itunes:image href='{{ site.podcast.logo | absolute_url }}'/>
+    <language>{{ site.podcast.language }}</language>
+    <copyright>copyright © {{ site.podcast.author }}</copyright>
+    <itunes:owner>
+      <itunes:name>{{ site.podcast.author }}</itunes:name>
+      <itunes:email>{{ site.podcast.email }}</itunes:email>
+    </itunes:owner>
+    <itunes:category text='{{ site.podcast.category }}'>
+      <itunes:category text='{{ site.podcast.subcategory }}'/>
+    </itunes:category>
+    <itunes:type>{{ site.podcast.type }}</itunes:type>
+    <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
+
+    {% for post in site.categories.podcast %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <enclosure url='{{ post.audio | absolute_url }}' length='{{ post.length | xml_escape }}'/>
+
+      <guid>{{ post.guid }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.content | xml_escape | strip_newlines }}</description>
+      <itunes:duration>{{ post.length | xml_escape }}</itunes:duration>
+      <link>{{ post.url | absolute_url }}</link>
+      {% if post.image %}
+      <itunes:image>{{ post.image | absolute_url }}</itunes:image>
+      {% endif %}
+      <itunes:explicit>{{ post.explicit | default: "no" }}</itunes:explicit>
+
+      <itunes:title>{{ post.title | xml_escape }}</itunes:title>
+      <itunes:season>{{ post.season }}</itunes:season>
+      <itunes:episode>{{ post.episode }}</itunes:episode>
+      <itunes:episodeType>{{ post.episodeType | default: "full" }}</itunes:episodeType>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
