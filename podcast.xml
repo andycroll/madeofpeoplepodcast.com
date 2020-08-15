@@ -42,7 +42,7 @@ layout: null
     {% for post in site.categories.podcast %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <enclosure url='{{ post.audio | absolute_url }}' length='{{ post.length | xml_escape }}'/>
+      <enclosure url='{{ post.file | absolute_url }}' length='{{ post.length | xml_escape }}'/>
 
       <guid isPermaLink="false">{{ post.guid }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
