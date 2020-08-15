@@ -29,7 +29,7 @@ podcast:
   logo: "/images/show-artwork.jpg"
   language: en # iso639-2
   category: Technology # help.apple.com/itc/podcasts_connect/#/itc9267a2f12
-  subcategory: "Society & Culture"
+  category_2: "Society & Culture"
   type: episodic # episodic | serial
   # explicit: "yes" | default: "no"
   # block: # "yes" | default: "no"

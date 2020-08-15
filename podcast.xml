@@ -30,9 +30,8 @@ layout: null
       <itunes:name>{{ site.podcast.author }}</itunes:name>
       <itunes:email>{{ site.podcast.email }}</itunes:email>
     </itunes:owner>
-    <itunes:category text='{{ site.podcast.category | xml_escape }}'>
-      <itunes:category text='{{ site.podcast.subcategory | xml_escape }}'/>
-    </itunes:category>
+    <itunes:category text='{{ site.podcast.category | xml_escape }}' />
+    <itunes:category text='{{ site.podcast.category_2 | xml_escape }}' />
     <itunes:type>{{ site.podcast.type }}</itunes:type>
     <itunes:explicit>{{ site.podcast.explicit | default: "no" }}</itunes:explicit>
     <googleplay:explicit>{{ site.podcast.explicit | default: "no" }}</googleplay:explicit>
