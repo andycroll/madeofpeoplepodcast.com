@@ -1,12 +1,10 @@
 title: Site
 email: andy@goodscary.com
 description: ""
-url: "https://github.com/andycroll/gulpjekyll"
-twitter_username: andycroll
-color: "#FFFFFF"
+url: "https://madeofpeoplepodcast.com"
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
 
 include:
   - _redirects
@@ -22,16 +20,17 @@ exclude:
   - yarn.lock
 
 podcast:
-  title: [title]
-  description: [description]
+  title: "Made of People"
+  description: "A series of interviews with people who think wider than the technology that they use."
+  summary: "A series of interviews with people who think wider than the technology that they use. All software is made of people after all. Started as a result of Brighton Ruby not being an “in person” thing in 2020."
   url: /podcast.xml # podcast xml url
-  author: [podcast author]
-  email: [podcast email]
-  logo: [podcast logo url] # logo in 1400 – 3000 pixel
-  language: [language] # http://www.loc.gov/standards/iso639-2/php/code_list.php
-  category: [category] # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
-  subcategory: [subcategory]
-  type: [podcast type] # episodic | serial
-  explicit: [explicit state] # true | false
-  complete: [complete state] # 'yes' | 'no'
-  block: [block state] # 'yes' | 'no'
+  author: Andy Croll
+  email: andy@goodscary.com
+  logo: "/images/show-artwork.jpg"
+  language: en # iso639-2
+  category: Technology # help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+  subcategory: "Society & Culture"
+  type: episodic # episodic | serial
+  # explicit: "yes" | default: "no"
+  # block: # "yes" | default: "no"
+  # copyright: # defaults to author

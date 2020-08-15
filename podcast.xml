@@ -2,46 +2,72 @@
 layout: null
 ---
 
-<?xml version='1.0' encoding='utf-8'?>
-<rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
+    <atom:link rel="self" type="application/atom+xml" href="{{ site.podcast.url | absolute_url }}" title="MP3 Audio"/>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
+
     <title>{{ site.podcast.title }}</title>
-    <description>{{ site.podcast.description }}</description>
-    <link>{{ '/' | absolute_url }}</link>
+    <itunes:title>{{ site.podcast.title }}</itunes:title>
+    <itunes:subtitle>{{ site.podcast.description }}</itunes:subtitle>
+    <description>
+      <![CDATA[
+      {{ site.podcast.description }}
+      ]]>
+    </description>
+    <itunes:summary>{{ site.podcast.summary }}</itunes:summary>
+    <googleplay:summary>{{ site.podcast.summary }}</googleplay:summary>
+    <link>{{ "/" | absolute_url }}</link>
     <itunes:author>{{ site.podcast.author }}</itunes:author>
+    <googleplay:author>{{ site.podcast.author }}</googleplay:author>
     <itunes:email>{{ site.podcast.email }}</itunes:email>
-    <itunes:image href='{{ site.podcast.logo | absolute_url }}'/>
+    <itunes:image href="{{ site.podcast.logo | absolute_url }}" />
+    <googleplay:image href="{{ site.podcast.logo | absolute_url }}" />
     <language>{{ site.podcast.language }}</language>
-    <copyright>copyright © {{ site.podcast.author }}</copyright>
+    <copyright>{{ site.podcast.copyright | default: site.podcast.author }}</copyright>
     <itunes:owner>
       <itunes:name>{{ site.podcast.author }}</itunes:name>
       <itunes:email>{{ site.podcast.email }}</itunes:email>
     </itunes:owner>
-    <itunes:category text='{{ site.podcast.category }}'>
-      <itunes:category text='{{ site.podcast.subcategory }}'/>
+    <itunes:category text='{{ site.podcast.category | xml_escape }}'>
+      <itunes:category text='{{ site.podcast.subcategory | xml_escape }}'/>
     </itunes:category>
     <itunes:type>{{ site.podcast.type }}</itunes:type>
-    <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
+    <itunes:explicit>{{ site.podcast.explicit | default: "no" }}</itunes:explicit>
+    <googleplay:explicit>{{ site.podcast.explicit | default: "no" }}</googleplay:explicit>
+    <itunes:complete>{{ site.podcast.complete | default: "no" }}</itunes:complete>
+    <googleplay:complete>{{ site.podcast.complete | default: "no" }}</googleplay:complete>
 
     {% for post in site.categories.podcast %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <enclosure url='{{ post.audio | absolute_url }}' length='{{ post.length | xml_escape }}'/>
 
-      <guid>{{ post.guid }}</guid>
+      <guid isPermaLink="false">{{ post.guid }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <description>{{ post.content | xml_escape | strip_newlines }}</description>
-      <itunes:duration>{{ post.length | xml_escape }}</itunes:duration>
+      <description>
+        <![CDATA[
+        {{ post.content | xml_escape | strip_newlines }}
+        ]]>
+      </description>
       <link>{{ post.url | absolute_url }}</link>
+      <itunes:duration>{{ post.length | xml_escape }}</itunes:duration>
+      <itunes:keywords>{{ post.keywords | default: site.podcast.keywords }}</itunes:keywords>
+      <itunes:author>{{ post.author | default: site.podcast.author }}</itunes:author>
       {% if post.image %}
       <itunes:image>{{ post.image | absolute_url }}</itunes:image>
       {% endif %}
       <itunes:explicit>{{ post.explicit | default: "no" }}</itunes:explicit>
-
+      <googleplay:explicit>{{ post.explicit | default: "no" }}</googleplay:explicit>
       <itunes:title>{{ post.title | xml_escape }}</itunes:title>
+      {% if post.season %}
       <itunes:season>{{ post.season }}</itunes:season>
+      {% endif %}
       <itunes:episode>{{ post.episode }}</itunes:episode>
       <itunes:episodeType>{{ post.episodeType | default: "full" }}</itunes:episodeType>
+      <itunes:block>{{ post.block | default: "no" }}</itunes:block>
+      <googleplay:block>{{ post.block | default: "no" }}</googleplay:block>
     </item>
     {% endfor %}
   </channel>
