@@ -3,6 +3,8 @@ email: andy@goodscary.com
 description: ""
 url: "https://madeofpeoplepodcast.com"
 
+permalink: /:slug/
+
 plugins:
   - jekyll-seo-tag
 

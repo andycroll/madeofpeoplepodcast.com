@@ -1,6 +1,7 @@
 ---
 layout: podcast
 category: podcast
+slug: "s01e00-trailer"
 
 title: "Welcome"
 date: 2020-06-16 14:00:00
