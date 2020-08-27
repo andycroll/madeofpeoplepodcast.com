@@ -2,11 +2,25 @@
 layout: default
 ---
 
-<br>
-<audio controls preload='auto' style='width: 100%;'><source src='{{ page.file | absolute_url }}'></audio>
-<p>
-  {% if page.season %}Season {{ page.season }} {% endif %}
-  {% if page.episode %}Episode {{ page.episode }}{% endif %}
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="h6 mb-0 text-uppercase">
+        {% if page.season %}Season {{ page.season }} {% endif %}
+        {% if page.episode %}Episode {{ page.episode }}{% endif %}
+      </h2>
+      <h1>
+        {{ page.title }}
+      </h1>
+    </div>
+    <div class="col-12">
+      <audio controls preload="auto" class="w-100">
+        <source src="{{ page.file | absolute_url }}"">
+      </audio>
+    </div>
 
-{{ content }}
+    <div class="col-12">
+      {{ content }}
+    </div>
+  </div>
+</div>

@@ -21,36 +21,16 @@
 		<link rel="stylesheet" href="/css/site.min.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-			<div class="container-fluid">
-				<a class="navbar-brand pt-0" href="/">
-					<!-- <img src="/images/logo.svg" alt="logo" width="180px" /> -->
-				</a>
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarContent">
-					<nav class="navbar-nav mr-auto mt-2 mt-md-0 mb-md-0">
-						<div class="nav-item{% if page.url contains 'name' %} active{% endif %}">
-							<a class="nav-link" href="/">Item</a>
-						</div>
-					</nav>
-
-					<nav class="navbar-nav mt-2 mt-md-0">
-						<div class="nav-item text-right">
-							<hr class="d-md-none mt-1" />
-							<a class="btn btn-primary" href="/">Action</a>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</nav>
+		<div class="container-fluid">
+			<a class="navbar-brand text-black" href="/">
+				Made of People Podcast
+			</a>
+		</div>
 
 		{{ content }}
 
-		<footer class="footer bg-pink py-5"></footer>
+		<footer class="footer bg-pink py-5">
+		</footer>
 
 		<script async src="/js/site.js"></script>
 	</body>

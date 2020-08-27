@@ -97,7 +97,7 @@ function serve(done) {
 	done();
 }
 
-const watchCss = () => watch(paths.css.src + paths.purge.src, { ignoreInitial: false }, series(css));
+const watchCss = () => watch(paths.css.src + paths.purge.src, { ignoreInitial: false }, series(css, jekyll, reload));
 const watchJs = () => watch(paths.js.src, { ignoreInitial: false }, series(js));
 const watchJekyll = () => watch(paths.jekyll.src, series(jekyll, reload));
 const dev = series(clean, jekyllFull, css, js, serve, parallel(watchCss, watchJs, watchJekyll));
