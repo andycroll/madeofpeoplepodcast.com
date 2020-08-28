@@ -4,7 +4,7 @@ category: podcast
 slug: "s01e03-josh-puetz"
 
 title: "Josh Puetz"
-date: 2020-08-28 08:00:00
+date: 2020-08-31 08:00:00
 guid: "e2d7726d-8218-476c-aafc-3959239be50d"
 file: "files/s01e03.josh.mp3"
 summary: "Real WorkTM on an iPad"
