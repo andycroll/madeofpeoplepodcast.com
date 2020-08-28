@@ -17,6 +17,6 @@ episode: "3"
 
 From Alt:BrightonRuby 2020.
 
-[Building rubyfmt](https://brightonruby.com/2020/building-rubyfmt-penelope-phippen/)
+[The 14-day No Laptop Challenge](https://brightonruby.com/2020/the-14-day-no-laptop-challenge-josh-puetz/)
 
-Penelope expands on her experiences building an autoformatter for an language that is almost allergic to it.
+Two white guys talk about Apple stuff on a podcast, an underserved niche.
