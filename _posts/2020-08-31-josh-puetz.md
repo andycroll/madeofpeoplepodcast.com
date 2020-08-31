@@ -20,3 +20,5 @@ From Alt:BrightonRuby 2020.
 [The 14-day No Laptop Challenge](https://brightonruby.com/2020/the-14-day-no-laptop-challenge-josh-puetz/)
 
 Two white guys talk about Apple stuff on a podcast, an underserved niche.
+
+[@joshpuetz](https://twitter.com/joshpuetz)

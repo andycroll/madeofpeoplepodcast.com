@@ -20,3 +20,5 @@ From Alt:BrightonRuby 2020.
 [Technically a Talk](https://brightonruby.com/2020/technically-a-talk-eileen-uchitelle/)
 
 Eileen talks through her experiences building a major feature in Rails 6 and why she does the (good!) work she does for the Rails community.
+
+[@eileencodes](https://twitter.com/eileencodes)

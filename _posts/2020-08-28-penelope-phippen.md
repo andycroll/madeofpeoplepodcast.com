@@ -20,3 +20,5 @@ From Alt:BrightonRuby 2020.
 [Building rubyfmt](https://brightonruby.com/2020/building-rubyfmt-penelope-phippen/)
 
 Penelope expands on her experiences building an autoformatter for an language that is almost allergic to it.
+
+[@penelope_zone](https://twitter.com/penelope_zone)
