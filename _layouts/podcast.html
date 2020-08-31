@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 col-md-8">
       <h2 class="h6 mb-0 text-uppercase">
         {% if page.season %}Season {{ page.season }} {% endif %}
         {% if page.episode %}Episode {{ page.episode }}{% endif %}
@@ -13,7 +13,7 @@ layout: default
         {{ page.title }}
       </h1>
     </div>
-    <div class="col-12">
+    <div class="col-12 col-md-8 mb-4">
       <audio controls preload="auto" class="w-100">
         <source src="{{ page.file | absolute_url }}"">
       </audio>
