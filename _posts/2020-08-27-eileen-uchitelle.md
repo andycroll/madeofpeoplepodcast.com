@@ -9,7 +9,7 @@ guid: "6dc15b4c-090f-4db1-ab17-53eccf6bd96e"
 file: "files/s01e01.eileen.mp3"
 summary: "Extracting multiple database support from Github and love letters to the Rails community"
 keywords: "ruby, Brighton, Rails, technology, interview"
-duration: "00:30:58" # audio length in seconds
+duration: "1858" # audio length in seconds
 length: "14861974" # filesize in bytes
 season: "1"
 episode: "1"
