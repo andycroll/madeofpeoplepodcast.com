@@ -51,7 +51,7 @@ layout: null
         ]]>
       </description>
       <link>{{ post.url | absolute_url }}</link>
-      <itunes:duration>{{ post.length | xml_escape }}</itunes:duration>
+      <itunes:duration>{{ post.duration }}</itunes:duration>
       <itunes:keywords>{{ post.keywords | default: site.podcast.keywords }}</itunes:keywords>
       <itunes:author>{{ post.author | default: site.podcast.author }}</itunes:author>
       {% if post.image %}
